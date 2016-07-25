@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Flower&#39;s Blog - Articles</title>
+		<description>Everything about Mukosame.</description>
+		<link>http://mukosame.github.io</link>
+		<atom:link href="http://mukosame.github.io/feed.articles.xml" rel="self" type="application/rss+xml" />
+		
+			
+			<item>
+				<title>谈科学家的异化</title>
+				
+					<description>&lt;h2&gt;一、  异化与我们的社会&lt;/h2&gt;
+
+&lt;p&gt;异化，意为“异己的”，“指某物通过自己的活动而与某种曾属于它的他物相分离，以致于这个他物成为自足的并与本来拥有它的某物相对立的一种状态。”&lt;/p&gt;
+</description>
+				
+				<pubDate>Mon, 25 Jul 2016 00:00:00 +0800</pubDate>
+				<link>http://mukosame.github.io/this-is-a-demo-test</link>
+				<guid isPermaLink="true">http://mukosame.github.io/this-is-a-demo-test</guid>
+			</item>
+			
+		
+	</channel>
+</rss>
+

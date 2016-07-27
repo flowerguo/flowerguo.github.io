@@ -1,14 +1,32 @@
-#auto: true
-
-markdown: rdiscount
-
-highlighter: 'pygments'
-#paginate: 8
-permalink: /:title
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
 name: "Flower's Blog"
 title: Flower's blog
-description: Everything about Mukosame.
-url: http://mukosame.github.io
+description: Something about FlowerGuo
+baseurl: ""
+url: https://flowerguo.github.io/
 feed: /atom.xml
-author_info: <a href="http://mukosame.github.io/">Mukosame</a>
+author_info: <a href="https://flowerguo.github.io/">Flower</a>
+
+
+#多说评论
+comments:
+    provider: duoshuo
+    duoshuo:
+        short_name: flowerguo
+
+#Build settings
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+#paginate
+gems: [jekyll-paginate]
+paginate: 5

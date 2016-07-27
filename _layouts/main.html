@@ -1,22 +1,8 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <!--
-    * Author:    BeiYuu
-    * Revised:   Flower
-    -->
-    <meta charset="utf-8" />
-    <title>Flower's blog</title>
-    <meta name="author" content="Flower" />
-    <meta name="renderer" content="webkit">
-    <meta name="description" content="Flower's Blog, something about FlowerGuo" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-    <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <script src="/js/jquery-1.7.1.min.js"></script>
-  </head>
-  <body>
+---
+layout:           default
+---
+
+<body>
   <div class="index-wrapper">
     <div class="aside">
       <div class="info-card">
@@ -30,7 +16,7 @@
         <a href="http://instagram.com/beiyuu/" target="_blank"><img src="http://d36xtkk24g8jdx.cloudfront.net/bluebar/00c6602/images/ico/favicon.ico" alt="" width="22"/></a> -->
         <!-- 左部菜单 -->
         <div class="left-menu">
-          <a href="/" class="menu-item">Blog</a>
+          <a href="/blog/" class="menu-item">Blog</a>
           <a href="/demo" class="menu-item">Demo</a>
           <a href="/album/" class="menu-item">Album</a>
           <a href="" class="menu-item">About</a>
@@ -51,24 +37,7 @@
     </div>
 
     <div class="index-content">
-      <ul class="artical-list">
-  
-  <li>
-    <a href="/blog/2016/05/18/carriage-return-line-feed-new-line-end-file.html" class="title">回车、换行、和文件末尾空行</a>
-    <div class="title-desc">回车和换行在不同系统下面定义不同，时不时会有一些小问题出来，git 经常出现的 No new line at the end of file 也让很多人费解，需要梳理一下</div>
-  </li>
-  
-  <li>
-    <a href="/blog/2012/02/22/github-pages.html" class="title">使用Github Pages建独立博客</a>
-    <div class="title-desc">Github本身就是不错的代码社区，他也提供了一些其他的服务，比如Github Pages，使用它可以很方便的建立自己的独立博客，并且免费。</div>
-  </li>
-  
-  <li>
-    <a href="/blog/2011/12/18/why-blog.html" class="title">我为什么写博客？</a>
-    <div class="title-desc">写博客这个这么古老的行为，还有必要拿出来说吗，我看有。</div>
-  </li>
-  
-</ul>  
+      {{ content }}  
       
     </div>
 
@@ -87,6 +56,3 @@
     });
   </script>
 </body>
-
-
-</html>

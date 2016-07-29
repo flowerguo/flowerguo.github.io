@@ -16,5 +16,13 @@ tag: github jekyll
 ![新建github仓库](/images/blog/gh-pic1.png)
 注意：仓库的名字和用户名保持一致，才可使用 xxx.github.io 打开博客~
 
->第二步：Jekyll使用
+>第二步：Jekyll使用 <br/>
+在jekyll中文网站上了解jekyll的基本用法 <a href="http://jekyllcn.com/docs/usage/" target="_blank" title="">传送门</a> 
+此时，可以开始动手做博客了~
+
+>第三步：找寻jekyll模板 <br/>
+可以在网上找好看的jekyll模板，当然，自己设计制作是最好，但像设计感不强的我只能默默找模板。寻寻觅觅，终于找到心仪的模板 <a href="http://beiyuu.com/" target="_blank" title="">传送门</a> BeiYuu设计的网站，在此基础上自己做了一些修改。
+
+>第四步：代码提交到github <br/>
+将修改好的代码全部提交到github，打开 xxx.github.io ，你就可以看到属于你的博客啦~
 

@@ -4,7 +4,7 @@ layout:           default
 
 <body>
   <div class="index-wrapper">
-    <div class="aside">
+    <div class="aside index_bg">
       <div class="info-card">
         <div class="info-top">
           <div class="info-headicon"></div>
@@ -53,6 +53,16 @@ layout:           default
         $('.left-menu-m-list').slideUp(100);
       });
       e.stopPropagation();
+    });
+
+    $(function(){
+      var url = window.location.pathname.replace(/\//g,'');
+      if(url == ''){
+        url = 'index';
+      }
+
+      $('.aside').removeClass().addClass('aside '+url+'_bg');
+
     });
   </script>
 </body>

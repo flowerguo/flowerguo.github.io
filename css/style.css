@@ -193,6 +193,9 @@ a.external:hover {
   letter-spacing: 0.15em;
   text-shadow: rgba(255,255,255,0.5) 0 0 15px, rgba(255,255,255,0.5) 0 0 10px;
 }
+.index-wrapper .index_bg .info-card h1{
+  color: #888;
+}
 /*.index-wrapper .info-card a {
   margin: 0 15px;
 }*/
@@ -401,7 +404,7 @@ a.external:hover {
   color: #fff;
   font-size: 14px;
 }
-#particles-js {
+/*#particles-js {
   width: 100%;
   height: 100%;
   background-repeat: no-repeat;
@@ -415,7 +418,7 @@ a.external:hover {
   background: -o-radial-gradient(top left, #5d3571, #38658c);
   background: -ms-radial-gradient(top left, #5d3571, #38658c);
   background: radial-gradient(to bottom right, #5d3571, #38658c);
-}
+}*/
 #disqus_container {
   font-size: 12px;
 }
@@ -601,7 +604,7 @@ li.L9 {
   margin: 0 20px;
   font-size: 16px;
   color: #efefef;
-  border-top: 1px solid rgba(255,255,255,.6);
+  border-top: 1px solid #ccc;
   line-height: 50px;
 }
 .menu-item:hover {
@@ -611,6 +614,14 @@ li.L9 {
 .menu-item:first-child {
   border-top: none;
 }
+
+.index_bg .menu-item {
+  color: #999;
+}
+.index_bg .menu-item:hover {
+  color: #333;
+}
+
 .menu-icon {
   position: absolute;
   top: 1rem;
@@ -684,6 +695,18 @@ li.L9 {
 }
 .artcle-list>li a:hover {
   text-decoration: underline;
+}
+.aside.index_bg {
+  background: url('../images/site/index_bg.png') no-repeat center;
+  background-size: cover;
+}
+.aside.demo_bg {
+  background: url('../images/site/demo_bg.jpg') no-repeat center;
+  background-size: cover;
+}
+.aside.album_bg {
+  background: url('../images/site/album_bg.jpg') no-repeat center;
+  background-size: cover;
 }
 
 @media screen and (max-width: 767px) {

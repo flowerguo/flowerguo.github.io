@@ -11,14 +11,14 @@
     <meta name="renderer" content="webkit">
     <meta name="description" content="Flower's Blog, something about FlowerGuo" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
-    <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <script src="/js/jquery-1.7.1.min.js"></script>
   </head>
   <body>
   <div class="index-wrapper">
-    <div class="aside">
+    <div class="aside index_bg">
       <div class="info-card">
         <div class="info-top">
           <div class="info-headicon"></div>
@@ -74,6 +74,16 @@
         $('.left-menu-m-list').slideUp(100);
       });
       e.stopPropagation();
+    });
+
+    $(function(){
+      var url = window.location.pathname.replace(/\//g,'');
+      if(url == ''){
+        url = 'index';
+      }
+
+      $('.aside').removeClass().addClass('aside '+url+'_bg');
+
     });
   </script>
 </body>

@@ -1,0 +1,51 @@
+<a href="/" class="home-icon"></a>
+
+<span class="classify-icon">
+	<i></i>
+</span>
+
+<section class="classify-menu">
+	{% for category in site.categories%}
+      <p class="classify-name"><a href="">{{ category | first }}</a></p>
+      <ul class="classify-list">
+        {% for posts in category %}
+          {% for post in posts %}
+            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+          {% endfor %}
+        {% endfor %}
+      </ul>
+	{% endfor %}
+</section>
+
+<span class="backTop" style="display: none;">
+	<i></i>
+</span>
+
+<script>
+	$('.classify-icon').bind('click',function(e){
+		$('.classify-menu').css({
+			'display': 'block',
+			'right': '0',
+			'animation': 'slideShow .5s',
+			'-webkit-animation': 'slideShow .5s'
+		});
+		$(document).one('click', function(){
+	        $('.classify-menu').css({
+				'animation': 'slideHide .5s',
+				'-webkit-animation': 'slideHide .5s',
+				'right': '-60%'
+			});
+	    });
+	    e.stopPropagation();
+	});
+	$(document).scroll(function(){
+		if($(this).scrollTop()>0){
+			$('.backTop').fadeIn();
+		}else if($(this).scrollTop()<=0){
+			$('.backTop').fadeOut();
+		}
+	});
+	$('.backTop').click(function(){
+		$('html,body').animate({scrollTop: 0},400,function(){$(this).show()});
+	});
+</script>

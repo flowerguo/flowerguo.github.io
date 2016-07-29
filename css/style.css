@@ -651,6 +651,7 @@ li.L9 {
   width: 35px;
   height: 30px;
   background-color: rgba(0,0,0,.6);
+  border-radius: 3px;
   display: none;
 }
 .menu-icon:after {
@@ -873,6 +874,12 @@ li.L9 {
   }
   .menu-icon {
     display: block;
+  }
+  .index_bg .menu-item {
+    color: #fff;
+  }
+  .index_bg .menu-item:hover {
+    color: #e0f0e9;
   }
   .body-post {
     overflow-x: hidden;

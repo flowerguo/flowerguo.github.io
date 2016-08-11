@@ -28,5 +28,5 @@ kramdown:
   syntax_highlighter: rouge
 
 #paginate
-gems: [jekyll-paginate]
-paginate: 5
+# gems: [jekyll-paginate]
+# paginate: 5

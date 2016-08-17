@@ -601,6 +601,7 @@ a {
   position: absolute;
   right: -60%;
   top: 0;
+  z-index: 10;
   width: 60%;
   height: 100%;
   padding: 1.2rem;

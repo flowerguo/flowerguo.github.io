@@ -745,8 +745,10 @@ a {
 }
 
 @keyframes slideShow{
-  from { right: -60%; }
-  to { right: 0; }
+  /*from { right: -60%; }
+  to { right: 0; }*/
+  0% {transform: translateX(60%);}
+  100% {transform: translateX(0);}
 }
 @keyframes slideHide{
   from { right: 0; }

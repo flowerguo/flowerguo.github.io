@@ -49,16 +49,18 @@ icon: tags
         </ul>
     </div>
     <div class="post-right">
-      <h3>Tags</h3>
-      <ul class="label-list">
-          {% for tag in sortedtags %}
-          <li>
-              <a class="scroll" href="#{{ tag }}">
-                  {{ tag }} <span class="num">({{ site.tags[tag].size }})</span>
-              </a>
-          </li>
-          {% endfor %}
-      </ul>
+        <div class="fixedwrap">
+        <h3>Tags</h3>
+        <ul class="label-list">
+            {% for tag in sortedtags %}
+                <li>
+                    <a class="scroll" href="#{{ tag }}">
+                      {{ tag }} <span class="num">({{ site.tags[tag].size }})</span>
+                    </a>
+                </li>
+            {% endfor %}
+        </ul>
+        </div>
     </div>
   </div>
     

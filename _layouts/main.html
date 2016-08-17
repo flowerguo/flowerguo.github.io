@@ -5,7 +5,7 @@ layout:           default
 <body>
     <div class="index-wrapper">
         <!-- 左部菜单 -->
-        <div class="aside index_bg">
+        <div class="aside blog_bg">
             <div class="info-card">
                 <div class="info-top">
                     <div class="info-headicon"></div>
@@ -29,7 +29,7 @@ layout:           default
                 </div>
             <!-- 版权 -->
             </div>
-          <div id="particles-js"></div>
+          <!-- <div id="particles-js"></div> -->
         </div>
         <!-- 右部内容 -->
         <div class="index-content">
@@ -52,12 +52,13 @@ layout:           default
         });
 
         $(function(){
-        var url = window.location.pathname.replace(/\//g,'');
-        if(url == ''){
-            url = 'index';
-        }
-
-        $('.aside').removeClass().addClass('aside '+url+'_bg');
+            var url = window.location.pathname.replace(/\//g,'');
+            if(url == '' || url == undefined){
+                alert(1)
+                url = 'blog';
+            }
+            console.log(url)
+            $('.aside').removeClass().addClass('aside '+url+'_bg');
 
         });
     </script>

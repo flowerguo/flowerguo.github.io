@@ -28,7 +28,7 @@ layout: default
                 <div class="cate-list">
 
                 {% for category in site.categories%}
-                    <h3 class="clearfix"><a href="">{{ category | first }}</a><span class="num">{{ category | last | size }}</span></h3>
+                    <h3 class="clearfix"><a href="/{{ category | first }}">{{ category | first }}</a><span class="num">{{ category | last | size }}</span></h3>
                     <ul class="artcle-list">
                     {% for posts in category %}
                         {% for post in posts %}

@@ -30,22 +30,18 @@
 
 <script>
 	$(function(){
-		var stop = 1;
-
 		$('.classify-icon').bind('click',function(e){
-			$('.classify-menu').addClass('stop');
-			$('body').css('overflow-y', 'hidden');
 			$('.classify-menu').css({
 				'display': 'block',
 				'right': '0',
-				'animation': 'slideShow .5s',
-				'-webkit-animation': 'slideShow .5s'
+				'animation': 'slideShow .3s',
+				'-webkit-animation': 'slideShow .3s'
 			});
 			$('.transMask').show();
 			$(document).one('click', function(){
 		        $('.classify-menu').css({
-					'animation': 'slideHide .5s',
-					'-webkit-animation': 'slideHide .5s',
+					'animation': 'slideHide .3s',
+					'-webkit-animation': 'slideHide .3s',
 					'right': '-60%'
 				});
 		    });
@@ -59,13 +55,6 @@
 			});
 			$(this).hide();
 		});
-
-		// document.getElementById('postWrap').addEventListener('touchmove', function(e){
-		// 	if(stop == 0){
-		// 		e.preventDefault();
-		// 		e.stopPropagation();
-		// 	}
-		// });
 	});
 	
 	$(document).scroll(function(){

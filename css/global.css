@@ -598,7 +598,7 @@ a {
   border-radius: 3px;
 }
 .classify-menu {
-  position: absolute;
+  position: fixed;
   right: -60%;
   top: 0;
   z-index: 10;
@@ -607,6 +607,7 @@ a {
   padding: 1.2rem;
   background-color: rgba(0,0,0,.9); 
   display: none;
+  overflow-y: scroll;
   /*animation: slideShow .8s;
   -webkit-animation: slideShow .8s;*/
 }

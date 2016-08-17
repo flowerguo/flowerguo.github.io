@@ -1,3 +1,10 @@
+<div class="floatMenu">
+    <div class="backHome"><a href="/">Flower</a></div>
+    <span class="switch">+</span>
+    <div class="contactLink">
+        <a href="https://github.com/flowerguo/"><img src="/images/logoicon/github.png" alt=""></a>
+    </div>
+</div>
 
 <span class="classify-icon">
 	<i></i>
@@ -15,28 +22,52 @@
       </ul>
 	{% endfor %}
 </section>
+<div class="transMask" style="display: none;"></div>
 
 <span class="backTop" style="display: none;">
 	<i></i>
 </span>
 
 <script>
-	$('.classify-icon').bind('click',function(e){
-		$('.classify-menu').css({
-			'display': 'block',
-			'right': '0',
-			'animation': 'slideShow .5s',
-			'-webkit-animation': 'slideShow .5s'
+	$(function(){
+		var stop = 1;
+
+		$('.classify-icon').bind('click',function(e){
+			$('.classify-menu').addClass('stop');
+			$('body').css('overflow-y', 'hidden');
+			$('.classify-menu').css({
+				'display': 'block',
+				'right': '0',
+				'animation': 'slideShow .5s',
+				'-webkit-animation': 'slideShow .5s'
+			});
+			$('.transMask').show();
+			$(document).one('click', function(){
+		        $('.classify-menu').css({
+					'animation': 'slideHide .5s',
+					'-webkit-animation': 'slideHide .5s',
+					'right': '-60%'
+				});
+		    });
+		    e.stopPropagation();
 		});
-		$(document).one('click', function(){
-	        $('.classify-menu').css({
+		$('.transMask').bind('click', function(){
+			$('.classify-menu').css({
 				'animation': 'slideHide .5s',
 				'-webkit-animation': 'slideHide .5s',
 				'right': '-60%'
 			});
-	    });
-	    e.stopPropagation();
+			$(this).hide();
+		});
+
+		// document.getElementById('postWrap').addEventListener('touchmove', function(e){
+		// 	if(stop == 0){
+		// 		e.preventDefault();
+		// 		e.stopPropagation();
+		// 	}
+		// });
 	});
+	
 	$(document).scroll(function(){
 		if($(this).scrollTop()>0){
 			$('.backTop').fadeIn();
@@ -47,4 +78,12 @@
 	$('.backTop').click(function(){
 		$('html,body').animate({scrollTop: 0},400,function(){$(this).show()});
 	});
+	$('.switch').click(function(){
+      var $link = $(this).siblings('.contactLink');
+      if($link.is(':hidden')){
+        $link.slideDown(100);
+      }else {
+        $link.slideUp(100);
+      }
+    });
 </script>

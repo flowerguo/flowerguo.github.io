@@ -13,85 +13,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
     <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/css/style.css"> -->
+    <link rel="stylesheet" type="text/css" href="/css/global.css">
     <link rel="stylesheet" type="text/css" href="/css/highlight.css">
     <script src="/js/jquery-1.7.1.min.js"></script>
   </head>
   <body>
-  <div class="index-wrapper">
-    <div class="aside index_bg">
-      <div class="info-card">
-        <div class="info-top">
-          <div class="info-headicon"></div>
-          <h1>Flower</h1>
-        </div>
-        
-        <!-- <a href="http://weibo.com/beiyuu/" target="_blank"><img src="http://www.weibo.com/favicon.ico" alt="" width="25"/></a>
-        <a href="http://www.douban.com/people/beiyuu/" target="_blank"><img src="http://www.douban.com/favicon.ico" alt="" width="22"/></a>
-        <a href="http://instagram.com/beiyuu/" target="_blank"><img src="http://d36xtkk24g8jdx.cloudfront.net/bluebar/00c6602/images/ico/favicon.ico" alt="" width="22"/></a> -->
+    <div class="index-wrapper">
         <!-- 左部菜单 -->
-        <div class="left-menu">
-          <a href="/" class="menu-item">Blog</a>
-          <a href="/demo" class="menu-item">Demo</a>
-          <a href="/album/" class="menu-item">Album</a>
-          <a href="" class="menu-item">About</a>
+        <div class="aside index_bg">
+            <div class="info-card">
+                <div class="info-top">
+                    <div class="info-headicon"></div>
+                    <h1>Flower</h1>
+                </div>
+                <!-- 左部菜单 -->
+                <div class="left-menu">
+                    <a href="/" class="menu-item">Blog</a>
+                    <a href="/demo" class="menu-item">Demo</a>
+                    <a href="/album/" class="menu-item">Album</a>
+                    <a href="" class="menu-item">About</a>
+                </div>
+                <div class="left-menu-mobile">
+                    <span class="menu-icon"></span>
+                    <div class="left-menu-m-list">
+                        <a class="menu-item" href="/">Blog</a>
+                        <a class="menu-item" href="/demo/">Demo</a>
+                        <a class="menu-item" href="/album/">Album</a>
+                        <a class="menu-item" href="">About</a>
+                    </div>
+                </div>
+            <!-- 版权 -->
+            </div>
+          <div id="particles-js"></div>
         </div>
-        <div class="left-menu-mobile">
-          <span class="menu-icon"></span>
-          <div class="left-menu-m-list">
-            <a class="menu-item" href="/">Blog</a>
-            <a class="menu-item" href="/demo/">Demo</a>
-            <a class="menu-item" href="/album/">Album</a>
-            <a class="menu-item" href="">About</a>
-          </div>
-        </div>
-        <!-- 版权 -->
-
-      </div>
-      <div id="particles-js"></div>
-    </div>
-
-    <div class="index-content">
-      <ul class="artical-list">
-  
-  <li>
-    <a href="/demo/2016/08/03/doraemon-css3.html" class="title">CSS3 Doraemon</a>
-    <div class="title-desc">CSS3 Doraemon</div>
-  </li>
-  
-  <li>
-    <a href="/demo/2016/07/28/html5-clock-demo.html" class="title">Canvas 制作绚丽效果的时钟</a>
-    <div class="title-desc">canvas 制作绚丽效果的时钟</div>
-  </li>
-  
+        <!-- 右部内容 -->
+        <div class="index-content">
+          <ul class="artical-list">
+	
+	<li>
+		<a href="/demo/2016/08/03/doraemon-css3.html" class="title">CSS3 Doraemon</a>
+		<div class="title-desc">CSS3 Doraemon</div>
+	</li>
+	
+	<li>
+		<a href="/demo/2016/07/28/html5-clock-demo.html" class="title">Canvas 制作绚丽效果的时钟</a>
+		<div class="title-desc">canvas 制作绚丽效果的时钟</div>
+	</li>
+	
 </ul>  
-      
+        </div>
     </div>
 
-  <script>
-    // menu click 事件
-    $('.menu-icon').click(function(e){
-      if($('.left-menu-m-list').is(':hidden')){
-        $('.left-menu-m-list').slideDown(100);
-      }else{
-        $('.left-menu-m-list').slideUp(100);
-      }
-      $(document).one('click', function(){
-        $('.left-menu-m-list').slideUp(100);
-      });
-      e.stopPropagation();
-    });
+    <script>
+        // menu click 事件
+        $('.menu-icon').click(function(e){
+            if($('.left-menu-m-list').is(':hidden')){
+                $('.left-menu-m-list').slideDown(100);
+            }else{
+                $('.left-menu-m-list').slideUp(100);
+            }
+            $(document).one('click', function(){
+                $('.left-menu-m-list').slideUp(100);
+            });
+            e.stopPropagation();
+        });
 
-    $(function(){
-      var url = window.location.pathname.replace(/\//g,'');
-      if(url == ''){
-        url = 'index';
-      }
+        $(function(){
+        var url = window.location.pathname.replace(/\//g,'');
+        if(url == ''){
+            url = 'index';
+        }
 
-      $('.aside').removeClass().addClass('aside '+url+'_bg');
+        $('.aside').removeClass().addClass('aside '+url+'_bg');
 
-    });
-  </script>
+        });
+    </script>
 </body>
 
 </html>

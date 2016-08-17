@@ -3,52 +3,46 @@ layout: default
 ---
 
 <body class="body-post">
-  <div class="floatMenu">
-        <div class="backHome"><a href="/">Flower</a></div>
-        <span class="switch">+</span>
-        <div class="contactLink">
-            <a href="https://github.com/flowerguo/"><img src="/images/logoicon/github.png" alt=""></a>
+    <div class="post-wrapper clearfix" id="postWrap">
+        <!-- 左部文章内容 -->
+        <div class="post-left">
+            <h1 class="post-title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
+            <div class="page-info clearfix">
+                <span class="post-date">{{ page.date|date:"%Y-%m-%d" }}</span>
+                <div class="post-tags">
+                    {% for tag in page.tags %}
+                        <a href="/tags/#{{ tag }}">{{ tag }}</a>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="post-body">
+                {{ content }}
+            </div>
+            <!-- 评论 -->
+            {% include duoshuo.html %}
+        </div>
+
+        <!-- 右部内容 -->
+        <div class="post-right">
+            <div class="fixedwrap">
+                <div class="cate-list">
+
+                {% for category in site.categories%}
+                    <h3 class="clearfix"><a href="">{{ category | first }}</a><span class="num">{{ category | last | size }}</span></h3>
+                    <ul class="artcle-list">
+                    {% for posts in category %}
+                        {% for post in posts %}
+                            <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+                        {% endfor %}
+                    {% endfor %}
+                    </ul>
+                {% endfor %}
+
+                </div>
+            </div>
         </div>
     </div>
-  <div class="post-wrapper clearfix">
-  	<div class="post-left">
-  		<h1 class="post-title"><a href="{{ page.url }}" title="{{ page.title }}">{{ page.title }}</a></h1>
-	    <p class="post-date">{{ page.date|date:"%Y-%m-%d" }}</p>
-      <div class="post-body">
-        {{ content }}
-      </div>
-	    
-	    {% include duoshuo.html %}
-  	</div>
-    <div class="post-right">
-    	<div class="cate-list">
-
-    		{% for category in site.categories%}
-          <h3 class="clearfix"><a href="">{{ category | first }}</a><span class="num">{{ category | last | size }}</span></h3>
-          <ul class="artcle-list">
-            {% for posts in category %}
-              {% for post in posts %}
-                <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-              {% endfor %}
-            {% endfor %}
-          </ul>
-			  {% endfor %}
-
-    	</div>
-    </div>
-  </div>
-
-  {% include classify.html %}
-
-  <!-- <script src="/js/post.js" type="text/javascript"></script> -->
-  <script>
-    $('.switch').click(function(){
-      var $link = $(this).siblings('.contactLink');
-      if($link.is(':hidden')){
-        $link.slideDown(100);
-      }else {
-        $link.slideUp(100);
-      }
-    });
-  </script>
+    
+    <!-- 浮动菜单 -->
+    {% include classify.html %}
 </body>

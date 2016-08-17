@@ -3,7 +3,7 @@ layout:     post
 title:      用CSS3绘制圆弧
 description: 用CSS3绘制圆弧
 categories: blog
-tag: html css3
+tags: html css3
 ---
 
 在w3cfuns前端网上看到了css3制作的加载loading，<a target="_blank" href="http://www.w3cfuns.com/notes/28003/56008504355cf20cfaa08dcc022b6e25.html">传送门</a>

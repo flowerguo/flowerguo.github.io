@@ -30,3 +30,6 @@ kramdown:
 #paginate
 # gems: [jekyll-paginate]
 # paginate: 5
+
+# url
+tag_dir: tags/

@@ -3,7 +3,7 @@ layout:     post
 title:      HTML5 Canvas 学习笔记
 description: 关于Canvas中常用的API接口方法介绍
 categories: blog
-tag: html html5 canvas
+tags: canvas html5
 ---
 
 在维基百科中的描述中，Canvas元素是HTML5的一部分，允许脚本语言动态渲染位图像。

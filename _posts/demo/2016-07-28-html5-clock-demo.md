@@ -3,7 +3,7 @@ layout:     post
 title:      Canvas 制作绚丽效果的时钟
 description: canvas 制作绚丽效果的时钟
 categories: demo
-tag: html5 canvas
+tags: canvas html5
 ---
 
 搬运慕课网的 <a href="http://www.imooc.com/view/133">绚丽的倒计时效果的学习</a>   

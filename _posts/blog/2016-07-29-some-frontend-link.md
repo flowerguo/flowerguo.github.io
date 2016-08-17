@@ -3,7 +3,7 @@ layout:     post
 title:      一些关于前端的链接
 description: 一些关于前端学习的链接
 categories: blog
-tag: link
+tags: link
 ---
 
 #### 以下是自己收藏的一些前端链接的书签，记录一下

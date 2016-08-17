@@ -3,66 +3,62 @@ layout:           default
 ---
 
 <body>
-  <div class="index-wrapper">
-    <div class="aside index_bg">
-      <div class="info-card">
-        <div class="info-top">
-          <div class="info-headicon"></div>
-          <h1>Flower</h1>
-        </div>
-        
-        <!-- <a href="http://weibo.com/beiyuu/" target="_blank"><img src="http://www.weibo.com/favicon.ico" alt="" width="25"/></a>
-        <a href="http://www.douban.com/people/beiyuu/" target="_blank"><img src="http://www.douban.com/favicon.ico" alt="" width="22"/></a>
-        <a href="http://instagram.com/beiyuu/" target="_blank"><img src="http://d36xtkk24g8jdx.cloudfront.net/bluebar/00c6602/images/ico/favicon.ico" alt="" width="22"/></a> -->
+    <div class="index-wrapper">
         <!-- 左部菜单 -->
-        <div class="left-menu">
-          <a href="/" class="menu-item">Blog</a>
-          <a href="/demo" class="menu-item">Demo</a>
-          <a href="/album/" class="menu-item">Album</a>
-          <a href="" class="menu-item">About</a>
+        <div class="aside index_bg">
+            <div class="info-card">
+                <div class="info-top">
+                    <div class="info-headicon"></div>
+                    <h1>Flower</h1>
+                </div>
+                <!-- 左部菜单 -->
+                <div class="left-menu">
+                    <a href="/" class="menu-item">Blog</a>
+                    <a href="/demo" class="menu-item">Demo</a>
+                    <a href="/album/" class="menu-item">Album</a>
+                    <a href="" class="menu-item">About</a>
+                </div>
+                <div class="left-menu-mobile">
+                    <span class="menu-icon"></span>
+                    <div class="left-menu-m-list">
+                        <a class="menu-item" href="/">Blog</a>
+                        <a class="menu-item" href="/demo/">Demo</a>
+                        <a class="menu-item" href="/album/">Album</a>
+                        <a class="menu-item" href="">About</a>
+                    </div>
+                </div>
+            <!-- 版权 -->
+            </div>
+          <div id="particles-js"></div>
         </div>
-        <div class="left-menu-mobile">
-          <span class="menu-icon"></span>
-          <div class="left-menu-m-list">
-            <a class="menu-item" href="/">Blog</a>
-            <a class="menu-item" href="/demo/">Demo</a>
-            <a class="menu-item" href="/album/">Album</a>
-            <a class="menu-item" href="">About</a>
-          </div>
+        <!-- 右部内容 -->
+        <div class="index-content">
+          {{ content }}  
         </div>
-        <!-- 版权 -->
-
-      </div>
-      <div id="particles-js"></div>
     </div>
 
-    <div class="index-content">
-      {{ content }}  
-      
-    </div>
+    <script>
+        // menu click 事件
+        $('.menu-icon').click(function(e){
+            if($('.left-menu-m-list').is(':hidden')){
+                $('.left-menu-m-list').slideDown(100);
+            }else{
+                $('.left-menu-m-list').slideUp(100);
+            }
+            $(document).one('click', function(){
+                $('.left-menu-m-list').slideUp(100);
+            });
+            e.stopPropagation();
+        });
 
-  <script>
-    // menu click 事件
-    $('.menu-icon').click(function(e){
-      if($('.left-menu-m-list').is(':hidden')){
-        $('.left-menu-m-list').slideDown(100);
-      }else{
-        $('.left-menu-m-list').slideUp(100);
-      }
-      $(document).one('click', function(){
-        $('.left-menu-m-list').slideUp(100);
-      });
-      e.stopPropagation();
-    });
+        $(function(){
+        var url = window.location.pathname.replace(/\//g,'');
+        if(url == ''){
+            url = 'index';
+        }
 
-    $(function(){
-      var url = window.location.pathname.replace(/\//g,'');
-      if(url == ''){
-        url = 'index';
-      }
+        $('.aside').removeClass().addClass('aside '+url+'_bg');
 
-      $('.aside').removeClass().addClass('aside '+url+'_bg');
-
-    });
-  </script>
+        });
+    </script>
 </body>

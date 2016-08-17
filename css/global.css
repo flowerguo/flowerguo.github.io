@@ -747,12 +747,12 @@ a {
 @keyframes slideShow{
   /*from { right: -60%; }
   to { right: 0; }*/
-  0% {transform: translateX(60%);}
-  100% {transform: translateX(0);}
+  0% {transform: translateX(60%);-webkit-transform: translateX(60%);}
+  100% {transform: translateX(0);-webkit-transform: translateX(0);}
 }
 @keyframes slideHide{
-  from { right: 0; }
-  to { right: -60%; }
+  0% {transform: translateX(-100%);-webkit-transform: translateX(-100%);}
+  100% {transform: translateX(0);-webkit-transform: translateX(0);}
 }
 @keyframes fadeIn{
   from { opacity: 0; }

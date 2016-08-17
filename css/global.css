@@ -709,8 +709,9 @@ a {
   color: #fff;
   background: rgba(0,0,0,.8);
   text-align: center;
-  line-height: 38px;
+  line-height: 35px;
   cursor: pointer;
+  font-weight: lighter;
 }
 .contactLink {
   width: 100%; 
@@ -796,6 +797,7 @@ a {
   .index-wrapper .title {
     font-size: 20px;
     margin-bottom: 10px;
+    line-height: 1.6;
   }
   .left-menu {
     display: none;

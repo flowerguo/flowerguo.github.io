@@ -61,6 +61,18 @@ icon: tags
       </ul>
     </div>
   </div>
-
-  {% include classify.html %}
+    
+    <!-- 浮动菜单 -->
+    <section class="classify-menu">
+        <ul class="classify-list">
+        {% for tag in sortedtags%}
+            <li>
+                <a class="scroll" href="#{{ tag }}">
+                {{ tag }} <span class="num">({{ site.tags[tag].size }})</span>
+                </a>
+            </li>
+        {% endfor %}
+        </ul>
+    </section>
+    {% include classify.html %}
 </body>

@@ -557,7 +557,19 @@ a {
 .label-list .scroll .num {
   float: right;
 }
-
+/** 分页 */
+.pagination {
+  overflow: hidden;
+  margin: 20px 0;
+}
+.pagination .last {
+  float: left;
+  color: #4d6dad;
+}
+.pagination .next {
+  float: right;
+  color: #4d6dad;
+}
 
 /** global */
 .classify-icon {
@@ -752,6 +764,8 @@ a {
   background-color: transparent;
   z-index: 9;
 }
+
+
 
 @keyframes slideShow{
   /*from { right: -60%; }

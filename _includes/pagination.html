@@ -1,0 +1,8 @@
+<div class="pagination">
+	{% if page.previous %}
+	<a href="{{ page.previous.url | prepend: site.baseurl }}" class="last"><<上一篇</a>
+	{% endif %}
+	{% if page.next %}
+	<a href="{{ page.next.url | prepend: site.baseurl }}" class="next">下一篇>></a>
+	{% endif %}
+</div>

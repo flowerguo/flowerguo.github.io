@@ -8,7 +8,7 @@ tags: javascript
 
 ### 第一种方法 时间复杂度为 O(n^2)1
 
-```javascript
+```JavaScript
 function uniq (arr) {
 	var result = [];
 	var flag = true;

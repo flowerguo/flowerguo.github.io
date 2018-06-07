@@ -6,9 +6,9 @@ categories: blog
 tags: javascript
 ---
 
-### 第一种方法 时间复杂度为 O(n^2)
+### 第一种方法 时间复杂度为 O(n^2)1
 
-```html
+```javascript
 function uniq (arr) {
 	var result = [];
 	var flag = true;

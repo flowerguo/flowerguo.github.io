@@ -6,7 +6,7 @@ categories: blog
 tags: javascript
 ---
 
-### 第一种方法 时间复杂度为 O(n^2)1
+### 第一种方法 时间复杂度为 O(n^2)
 
 ```JavaScript
 function uniq (arr) {
